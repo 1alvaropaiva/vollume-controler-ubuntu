@@ -11,7 +11,7 @@ import pulsectl
 class VolumeControlApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("mexe ai fdppp")
+        self.setWindowTitle("volume controller")
         self.setGeometry(100, 100, 400, 300)
         self.setMinimumSize(300, 200)
 
@@ -116,7 +116,7 @@ class VolumeControlApp(QWidget):
             
             # Mostra notificação inicial
             self.tray_icon.showMessage(
-                "Discoteca dos Cria",
+                "volume controller",
                 "Controle de volume iniciado!",
                 QSystemTrayIcon.Information,
                 2000
@@ -128,7 +128,7 @@ class VolumeControlApp(QWidget):
         self.activateWindow()
 
     def create_update_button(self):
-        refresh_button = QPushButton("f5zada")
+        refresh_button = QPushButton("ATUALIZAR")
         refresh_button.setCursor(Qt.PointingHandCursor)
         refresh_button.clicked.connect(self.update_streams)
         # Estilo específico para o botão f5zada
@@ -149,18 +149,18 @@ class VolumeControlApp(QWidget):
         try:
             # Mapeamento de nomes personalizados
             name_mapping = {
-                'firefox': 'firefox bebel',
-                'spotify': 'spotify bebel',
-                'WEBRTC VoiceEngine': 'discord bebel',
+                'firefox': 'firefox',
+                'spotify': 'spotify',
+                'WEBRTC VoiceEngine': 'discord',
                 'vlc': 'VLC Player',
-                'chrome': 'chrome bebel',
-                'google-chrome': 'chrome bebel',
+                'chrome': 'chrome',
+                'google-chrome': 'chrome',
                 'teams': 'Microsoft Teams',
                 'zoom': 'Zoom',
                 'obs': 'OBS Studio',
                 'plex': 'Plex Media',
                 'steam': 'Steam',
-                'whatsapp': 'zap bebel',
+                'whatsapp': 'zap',
                 'signal': 'Signal',
                 'thunderbird': 'E-mail',
                 'slack': 'Slack'
@@ -242,7 +242,7 @@ class VolumeControlApp(QWidget):
             event.ignore()
             self.hide()
             self.tray_icon.showMessage(
-                "Discoteca dos Cria",
+                "volume controller",
                 "O controle foi minimizado para a bandeja",
                 QSystemTrayIcon.Information,
                 2000
